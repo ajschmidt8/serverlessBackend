@@ -1,4 +1,4 @@
-'use strict';
+"use strict";
 
 module.exports.hello = (event, context, callback) => {
   // console.log('event', event);
@@ -6,9 +6,11 @@ module.exports.hello = (event, context, callback) => {
   const response = {
     statusCode: 200,
     body: JSON.stringify({
-      message: `This is a serverless response!. Env: ${process.env.ENVIRONMENT}`,
-      input: event,
-    }),
+      message: `This is a serverless response!! Env: ${
+        process.env.ENVIRONMENT
+      }`,
+      input: event
+    })
   };
 
   callback(null, response);
